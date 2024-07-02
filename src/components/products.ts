@@ -46,7 +46,7 @@ export class Products {
     }
 
     async revealCards (data: FlatsData[]): Promise<void> {
-        const template: string = await fetch('./templates/card.html') 
+        const template: string = await fetch('card.html')
             .then( async (resp: Response) => await resp.text());
 
         data.forEach((flat : FlatsData) => {
