@@ -17,7 +17,7 @@ export class Products {
             .then( data => {
                 this.data = data;
                 console.log(data)
-                // this.revealCards(data);
+                this.revealCards(data);
             });
 
         if (this.buttonElement) {
@@ -42,25 +42,25 @@ export class Products {
             }
         });
         this.motherElement!.innerHTML = ''
-        // this.revealCards(data);
+        this.revealCards(data);
     }
 
-    // async revealCards (data: FlatsData[]): Promise<void> {
-    //     const template: string = await fetch('./templates/card.html')
-    //         .then( async (resp: Response) => await resp.text());
+    async revealCards (data: FlatsData[]): Promise<void> {
+        const template: string = await fetch('./templates/card.html')
+            .then( async (resp: Response) => await resp.text());
 
-    //     data.forEach((flat : FlatsData) => {
-    //         const card : HTMLElement = new DOMParser().parseFromString(
-    //             template
-    //             .replace('{{id}}', flat.id.toString())
-    //             .replace('{{cost}}', flat.cost.toString())
-    //             .replace('{{square}}', flat.square.toString())
-    //             .replace('{{rooms}}', flat.rooms.toString()),
-    //             "text/html"
-    //         ).body.firstChild as HTMLElement;
+        data.forEach((flat : FlatsData) => {
+            const card : HTMLElement = new DOMParser().parseFromString(
+                template
+                .replace('{{id}}', flat.id.toString())
+                .replace('{{cost}}', flat.cost.toString())
+                .replace('{{square}}', flat.square.toString())
+                .replace('{{rooms}}', flat.rooms.toString()),
+                "text/html"
+            ).body.firstChild as HTMLElement;
             
-    //        this.motherElement!.appendChild(card)
-    //     });
-    // }
+           this.motherElement!.appendChild(card)
+        });
+    }
 }
 
