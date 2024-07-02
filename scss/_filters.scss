@@ -1,0 +1,47 @@
+.filterPopup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #00000060;
+    display: none;
+
+    .filterContainer {
+        width: clamp(300px, 90%, 500px);
+        height: 90vh;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+
+        display: grid;
+        grid-template-rows: 20px 1fr 20px;
+        align-self: center;
+        .filters {
+            width: 100%;
+            & > div {
+                padding: 20px;
+                text-align: right;
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                .title {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            .characteristics .action {
+                display: flex;
+                column-gap: 10px;
+                justify-content: end;
+            }
+        }
+    }
+
+}

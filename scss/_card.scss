@@ -1,0 +1,45 @@
+.card {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px #00000090;
+    width: 250px;
+    margin: 10px;
+    border: 3px solid white;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s;
+
+    .img {
+        height: 200px;
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
+        img {
+            transition: all 0.3s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 110%;
+        }
+    }
+
+    .info {
+        padding: 20px 20px 20px;    
+        .cost {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+    }
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 0px $mint;
+        img {
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '_common.scss';
+
+.preview {
+    display: grid;
+    grid-template-areas: 
+        "carousel props" 
+        "decsriprion description"
+        "map map"
+    ;
+}
