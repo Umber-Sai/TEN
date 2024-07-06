@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,7 @@
         display: grid;
         grid-template-rows: 20px 1fr 20px;
         align-self: center;
+
         .filters {
             width: 100%;
             & > div {
@@ -36,10 +37,58 @@
                     margin-bottom: 20px;
                 }
             }
-            .characteristics .action {
-                display: flex;
-                column-gap: 10px;
-                justify-content: end;
+            .characteristics {
+                .sellRent {
+                    position: relative;
+                    display: flex;
+                    width: 150px;
+                    border-left: 1px solid #ccc;
+                    input {
+                        display: none;
+                        &:checked + label .slider {
+                            transform: translateX(calc(100% + 4px));
+                            .rent {
+                                opacity: 0;
+                            }
+                            .sell {
+                                opacity: 100;
+                            }
+                        }
+                    }
+                    label {
+                        width: calc(100% - 5px);
+                        margin-left: 5px;
+                        height: 100%;
+                        background-color: #ddd;
+                        box-shadow: inset 0 0 5px #00000050;
+                        border-radius: 7px;
+                        .slider {
+                            position: relative;
+                            width: calc(50% - 4px);
+                            height: calc(100% - 4px);
+                            margin: 2px;
+                            border-radius: 5px;
+                            background-color: #fff;
+                            transition: transform .5s;
+                            box-shadow:  0 0 2px #00000050;
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                transition: opacity .5s;
+                            }
+                            .sell {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                .action {
+                    display: flex;
+                    column-gap: 10px;
+                    justify-content: end;
+                }
             }
         }
     }

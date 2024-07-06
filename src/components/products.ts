@@ -1,4 +1,5 @@
-import { RangeSlider } from '../other/slider';
+// import { RangeSlider } from '../other/slider';
+import { init2slider } from '../other/slider.js';
 import {FlatsData} from '../type/database.type'
 
 
@@ -26,8 +27,9 @@ export class Products {
             console.error('Filter button not found')
         }
 
-        // new Slider('slider1', 'slider2', 'slider-track', 50);
-        // new RangeSlider()
+        setTimeout(() => {init2slider('id66', 'id66b', 'id661', 'id662', 'id66i1', 'id66i2')}, 0)
+
+
     }
 
     private filterBtnQuery(): void {

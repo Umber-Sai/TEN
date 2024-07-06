@@ -1,49 +1,42 @@
-@charset "UTF-8";
-/* Основные стили для ползунков */
-.range-slider {
+.range-body {
   position: relative;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.range {
+  width: 400px;
+  height: 10px;
+  border-radius: 4px;
   background-color: #ddd;
-  margin: 25px auto;
 }
 
-input[type=range] {
+.range__button_1, .range__button_2 {
   position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-  background: transparent;
-  pointer-events: none; /* Отключаем взаимодействие с фоновыми ползунками */
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5019607843);
-  border-radius: 5px;
-  transform: translateY(-2px);
-  cursor: pointer;
-  pointer-events: all; /* Включаем взаимодействие с бегунками */
-}
-
-input[type=range]::-moz-range-thumb, input[type=range]::-webkit-slider-thumb {
-  pointer-events: all; /* Включаем взаимодействие с бегунками */
-}
-
-.slider-track {
-  position: absolute;
-  height: 4px;
-  background: #11482c;
   top: 50%;
-  left: 0;
+  width: 20px;
+  height: 20px;
+  cursor: move;
   transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+.range__between {
+  position: absolute;
+  height: 5px;
+  width: 0px;
+  margin-top: 3px;
+  border: none;
+  background-color: #559933;
+}
+
+.range_inpt1, .range_inpt2 {
+  margin-top: 20px;
+  width: 50px;
 }
 
 @font-face {
@@ -277,6 +270,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,6 +301,52 @@ footer {
 .filterPopup .filterContainer .filters > div .title {
   font-size: 20px;
   margin-bottom: 20px;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent {
+  position: relative;
+  display: flex;
+  width: 150px;
+  border-left: 1px solid #ccc;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent input {
+  display: none;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider {
+  transform: translateX(calc(100% + 4px));
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider .rent {
+  opacity: 0;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider .sell {
+  opacity: 100;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent label {
+  width: calc(100% - 5px);
+  margin-left: 5px;
+  height: 100%;
+  background-color: #ddd;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3137254902);
+  border-radius: 7px;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent label .slider {
+  position: relative;
+  width: calc(50% - 4px);
+  height: calc(100% - 4px);
+  margin: 2px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: transform 0.5s;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3137254902);
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent label .slider span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s;
+}
+.filterPopup .filterContainer .filters .characteristics .sellRent label .slider .sell {
+  opacity: 0;
 }
 .filterPopup .filterContainer .filters .characteristics .action {
   display: flex;
@@ -402,7 +442,6 @@ footer {
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
-  display: none;
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto 70px;
@@ -421,52 +460,6 @@ footer {
   padding: 5px 10px;
   color: #555;
   transition: all 0.5s;
-}
-.products .type .sellRent {
-  position: relative;
-  display: flex;
-  width: 150px;
-  border-left: 1px solid #ccc;
-}
-.products .type .sellRent input {
-  display: none;
-}
-.products .type .sellRent input:checked + label .slider {
-  transform: translateX(calc(100% + 4px));
-}
-.products .type .sellRent input:checked + label .slider .rent {
-  opacity: 0;
-}
-.products .type .sellRent input:checked + label .slider .sell {
-  opacity: 100;
-}
-.products .type .sellRent label {
-  width: calc(100% - 5px);
-  margin-left: 5px;
-  height: 100%;
-  background-color: #ddd;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3137254902);
-  border-radius: 7px;
-}
-.products .type .sellRent label .slider {
-  position: relative;
-  width: calc(50% - 4px);
-  height: calc(100% - 4px);
-  margin: 2px;
-  border-radius: 5px;
-  background-color: #fff;
-  transition: transform 0.5s;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3137254902);
-}
-.products .type .sellRent label .slider span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.5s;
-}
-.products .type .sellRent label .slider .sell {
-  opacity: 0;
 }
 .products .flats {
   display: flex;

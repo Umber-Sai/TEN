@@ -1,57 +1,48 @@
-/* Основные стили для ползунков */
-.range-slider {
+
+.range-body {
     position: relative;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
+
+    display: flex;
+
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.range {
+    width:400px;
+    height:10px;
+
+    border-radius: 4px;
     background-color: #ddd;
-    margin: 25px auto;
 }
 
-input[type="range"] {
+.range__button_1, .range__button_2 {
     position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    background: transparent;
-    pointer-events: none; /* Отключаем взаимодействие с фоновыми ползунками */
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    // -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #ffffff;
-    box-shadow:  0 0 5px #00000080;
-    border-radius: 5px;
-    transform: translateY(-2px);
-    cursor: pointer;
-    pointer-events: all; /* Включаем взаимодействие с бегунками */
-}
-
-input[type="range"]::-moz-range-thumb, input[type="range"]::-webkit-slider-thumb {
-    // width: 20px;
-    // height: 20px;
-    // background: #4CAF50;
-    // position: relative;
-    // z-index: 10;
-    // cursor: pointer;
-    pointer-events: all; /* Включаем взаимодействие с бегунками */
-}
-
-.slider-track {
-    position: absolute;
-    height: 4px;
-    // z-index: 9;
-    background: #11482c;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
 
-.slider-container input[type="range"]:focus {
-    // outline: none;
+    width: 20px;
+    height: 20px;
+
+    cursor: move;
+    transform: translateY(-50%);
+
+    border: none;
+    border-radius: 50%;
+    background-color: #999;
+}
+.range__between
+{
+  position: absolute;
+    height: 5px;
+    width:0px;
+    margin-top:3px;
+    border: none;
+    background-color: #559933;
+
+}
+.range_inpt1, .range_inpt2
+{
+  margin-top:20px;
+  width: 50px;
 }

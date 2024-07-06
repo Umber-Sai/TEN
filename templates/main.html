@@ -20,7 +20,7 @@
             <div class="title">
                 עלינו
             </div>
-    
+
             <p>
                 אנחנו צוות של סוכני נדל"ן מקצועיים עם ניסיון של שנים רבות. השירותים שלנו כוללים הערכת נכסים, ליווי משפטי
                 לעסקאות והתאמה אישית של נכסים. אנו מבטיחים אמינות, שקיפות ורמת שירות גבוהה. סמכו עלינו ואנחנו נעזור לכם
@@ -49,51 +49,66 @@
             <label for="apartments">דירות</label>
             <input type="radio" id="land" name="productType">
             <label for="land">אחר</label>
-            <div class="sellRent">
-                <input type="checkbox" id="sellRent">
-                <label for="sellRent">
-                    <div class="slider">
-                        <span class="sell">מכירה</span>
-                        <span class="rent">השכרה</span>
+            <input type="checkbox" id="filter">
+            <label for="filter" id="openFilters"></label>
+            <div class="filterPopup">
+                <div class="filterContainer">
+                    <div class="title">סינונים נוספים</div>
+                    <div class="filters">
+                        <div class="characteristics">
+                            <div class="sellRent">
+                                <input type="checkbox" id="sellRent">
+                                <label for="sellRent">
+                                    <div class="slider">
+                                        <span class="sell">מכירה</span>
+                                        <span class="rent">השכרה</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="title">מאפייני הנכס</div>
+                            <div class="action">
+                                <input type="checkbox" class="btn" id="condition">
+                                <label for="condition">מיזוג</label>
+                                <input type="checkbox" class="btn" id="stock">
+                                <label for="stock">מחסן</label>
+                                <input type="checkbox" class="btn" id="parking">
+                                <label for="parking">מניה</label>
+                            </div>
+                        </div>
+                        <div class="floor">
+                            <div class="title">קומה</div>
+                            <div class="action">
+
+                            </div>
+                        </div>
+                        <div class="size">
+                            <div class="title">גודל דירה (במ״ר)</div>
+                            <div class="action">
+
+                            </div>
+                        </div>
                     </div>
-                </label>
+                    <div class="actions">
+                        <button>accept</button>
+                        <button>cancel</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="flats" id="flats"></div>
-    </div>
 </section>
 
-<div class="filterPopup">
-    <div class="filterContainer">
-        <div class="title">סינונים נוספים</div>
-        <div class="filters">
-            <div class="characteristics">
-                <div class="title">מאפייני הנכס</div>
-                <div class="action">
-                    <input type="checkbox" class="btn" id="condition">
-                    <label for="condition">מיזוג</label>
-                    <input type="checkbox" class="btn" id="stock">
-                    <label for="stock">מחסן</label>
-                    <input type="checkbox" class="btn" id="parking">
-                    <label for="parking">מניה</label>
-                </div>
-            </div>
-            <div class="floor">
-                <div class="title">קומה</div>
-                <div class="action">
+<div class="range-body">
 
-                </div>
-            </div>
-            <div class="size">
-                <div class="title">גודל דירה (במ״ר)</div>
-                <div class="action">
-
-                </div>
-            </div>
-        </div>
-        <div class="actions">
-            <button>accept</button>
-            <button>cancel</button>
-        </div>
+    <div id='id66' class="range">
+        <div id='id66b' class='range__between'></div>
+        <button id='id661' class="range__button_1"></button>
+        <button id='id662' class="range__button_2"></button>
+        <input id='id66i1' class='range_inpt1' type='number' min='20' max='700'>
+        - <input id='id66i2' class='range_inpt2' type='number' min='20' max='700'>
     </div>
+</div>
+
+
+
 </div>
