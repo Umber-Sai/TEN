@@ -1,48 +1,53 @@
-
-.range-body {
-    position: relative;
-
-    display: flex;
-
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+.range-body {   
+    margin: 0 auto;
+    
+    background-color: red;
 }
 
 .range {
-    width:400px;
-    height:10px;
+    position: relative;
+    width: 400px;
+    height: 10px;
 
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #ddd;
-}
+    margin-bottom: 100px;
 
-.range__button_1, .range__button_2 {
-    position: absolute;
-    top: 50%;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
 
-    width: 20px;
-    height: 20px;
+    & > button {
+        position: absolute;
+        top: 50%;
 
-    cursor: move;
-    transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
 
-    border: none;
-    border-radius: 50%;
-    background-color: #999;
-}
-.range__between
-{
-  position: absolute;
-    height: 5px;
-    width:0px;
-    margin-top:3px;
-    border: none;
-    background-color: #559933;
+        cursor: move;
+        transform: translateY(-50%);
 
-}
-.range_inpt1, .range_inpt2
-{
-  margin-top:20px;
-  width: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: #999;
+    }
+
+    .range__between {
+        position: absolute;
+        height: 4px;
+        width: 0px;
+        margin-top: 3px;
+        border: none;
+        background-color: #559933;
+
+    }
+
+    & > input {
+        margin-top: 30px;
+        width: 30%;
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+    }
 }

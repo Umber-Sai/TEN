@@ -1,19 +1,17 @@
 .range-body {
-  position: relative;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  background-color: red;
 }
 
 .range {
+  position: relative;
   width: 400px;
   height: 10px;
-  border-radius: 4px;
+  border-radius: 5px;
   background-color: #ddd;
+  margin-bottom: 100px;
 }
-
-.range__button_1, .range__button_2 {
+.range > button {
   position: absolute;
   top: 50%;
   width: 20px;
@@ -24,19 +22,21 @@
   border-radius: 50%;
   background-color: #999;
 }
-
-.range__between {
+.range .range__between {
   position: absolute;
-  height: 5px;
+  height: 4px;
   width: 0px;
   margin-top: 3px;
   border: none;
   background-color: #559933;
 }
-
-.range_inpt1, .range_inpt2 {
-  margin-top: 20px;
-  width: 50px;
+.range > input {
+  margin-top: 30px;
+  width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 7px;
 }
 
 @font-face {
