@@ -27,7 +27,7 @@ export class Products {
             console.error('Filter button not found')
         }
 
-        setTimeout(() => {init2slider('id66', 'id66b', 'id661', 'id662', 'id66i1', 'id66i2')}, 0)
+        
 
 
     }

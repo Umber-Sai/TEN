@@ -1,28 +1,46 @@
 
-export function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
-    var slider = document.getElementById(idX);
-    var between = document.getElementById(btwX);
-    var button1 = document.getElementById(btn1X);
-    var button2 = document.getElementById(btn2X);
-    var inpt1 = document.getElementById(input1);
-    var inpt2 = document.getElementById(input2);
+export function init2slider(element, max, min, aliasValues) {
+    if(!aliasValues) {
+        aliasValues = {0:0}
+    }
+    var slider = element
+    var between = document.createElement('div');
+    between.className = 'range__between';
+    var button1 = document.createElement('button');
+    var button2 = document.createElement('button');
+    var inpt1 = document.createElement('input');
+    inpt1.setAttribute('min', min);
+    inpt1.setAttribute('max', max);
+    inpt1.setAttribute('type', 'text');
+    
+    var inpt2 = document.createElement('input');
+    inpt2.setAttribute('min', min);
+    inpt2.setAttribute('max', max);
+    inpt2.setAttribute('type', 'text');
+
+    slider.appendChild(between)
+    slider.appendChild(button1)
+    slider.appendChild(button2)
+    slider.appendChild(inpt1)
+    slider.appendChild(inpt2)
+
+    // const slider = document.getElementById('id66');
+    // const between = document.getElementById('id66b');
+    // const button1 = document.getElementById('id661');
+    // const button2 = document.getElementById('id662');
+    // const inpt1 = document.getElementById('id66i1');
+    // const inpt2 = document.getElementById('id66i2');
+
 
     var min = inpt1.min;
     var max = inpt1.max;
 
 
 
-    const aliasValues = {
-        '-1': 'minus one',
-        0: 'zero',
-        5: 'five'
-    }
-
-    // function aliasChecker (value) {
-    //     if(aliasValues[value]) return aliasValues[value];
-    //     const key = Object.keys(aliasValues).find(k => aliasValues[k] === value);
-    //     if(key) return key;
-    //     return value
+    // const aliasValues = {
+    //     '-1': 'minus one',
+    //     0: 'zero',
+    //     5: 'five'
     // }
 
     function aliasToKey(value) {

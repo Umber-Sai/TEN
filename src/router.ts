@@ -1,4 +1,4 @@
-import { Products } from "./components/products";
+import { Main } from "./components/main";
 import { config } from "./config";
 
 type RouteType = {
@@ -27,7 +27,7 @@ export class Router {
                 style : './styles/main.css',
                 template : './templates/main.html',
                 load () {
-                    new Products()
+                    new Main()
                 }
             },
             {

@@ -13,13 +13,7 @@
 </section>
 <div class="container">
 
-    <div id='id66' class="range">
-        <div id='id66b' class='range__between'></div>
-        <button id='id661' class="range__button_1"></button>
-        <button id='id662' class="range__button_2"></button>
-        <input id='id66i1' class='range_inpt1' type='text' min='-1' max='20'>
-        <input id='id66i2' class='range_inpt2' type='text' min='-1' max='20'>
-    </div>
+ 
 
     
 </div>
@@ -94,14 +88,21 @@
                         </div>
                         <div class="floor">
                             <div class="title">קומה</div>
-                            <div class="action">
-
-                            </div>
+                            <div class="customRangeSlider" min="-1" max="20" alias='{
+                                "-1": "minus one",
+                                "0": "zero",
+                                "5": "five"
+                            }'></div>
                         </div>
                         <div class="size">
                             <div class="title">גודל דירה (במ״ר)</div>
-                            <div class="action">
-
+                            <!-- <div class="customRangeSlider" ></div> -->
+                            <div id='id66' class="customRangeSlider">
+                                <div id='id66b' class='range__between'></div>
+                                <button id='id661' class="range__button_1"></button>
+                                <button id='id662' class="range__button_2"></button>
+                                <input id='id66i1' class='range_inpt1' type='text' min='-1' max='20'>
+                                <input id='id66i2' class='range_inpt2' type='text' min='-1' max='20'>
                             </div>
                         </div>
                     </div>
