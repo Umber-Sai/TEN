@@ -264,6 +264,16 @@ footer {
   height: 100%;
 }
 
+.filterPopup_button {
+  background-color: #ccc;
+}
+.filterPopup_button > input {
+  display: none;
+}
+.filterPopup_button > input:checked ~ .filterPopup {
+  display: flex;
+}
+
 .filterPopup {
   position: fixed;
   top: 0;
@@ -275,6 +285,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3764705882);
+  display: none;
 }
 .filterPopup .filterContainer {
   width: clamp(300px, 90%, 500px);
@@ -288,38 +299,42 @@ footer {
   grid-template-rows: 20px 1fr 20px;
   align-self: center;
 }
-.filterPopup .filterContainer .filters {
+.filterPopup .filterContainer .filters-window {
+  width: 100%;
+  overflow: scroll;
+}
+.filterPopup .filterContainer .filters-window .filters {
   width: 100%;
 }
-.filterPopup .filterContainer .filters > div {
+.filterPopup .filterContainer .filters-window .filters > div {
   padding: 20px;
   text-align: right;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-.filterPopup .filterContainer .filters > div .title {
+.filterPopup .filterContainer .filters-window .filters > div .title {
   font-size: 20px;
   margin-bottom: 20px;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent {
   position: relative;
   display: flex;
   width: 150px;
   border-left: 1px solid #ccc;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent input {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent input {
   display: none;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent input:checked + label .slider {
   transform: translateX(calc(100% + 4px));
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider .rent {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent input:checked + label .slider .rent {
   opacity: 0;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent input:checked + label .slider .sell {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent input:checked + label .slider .sell {
   opacity: 100;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent label {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent label {
   width: calc(100% - 5px);
   margin-left: 5px;
   height: 100%;
@@ -327,7 +342,7 @@ footer {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3137254902);
   border-radius: 7px;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent label .slider {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent label .slider {
   position: relative;
   width: calc(50% - 4px);
   height: calc(100% - 4px);
@@ -337,20 +352,21 @@ footer {
   transition: transform 0.5s;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3137254902);
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent label .slider span {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent label .slider span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s;
 }
-.filterPopup .filterContainer .filters .characteristics .sellRent label .slider .sell {
+.filterPopup .filterContainer .filters-window .filters .sell_rent .sellRent label .slider .sell {
   opacity: 0;
 }
-.filterPopup .filterContainer .filters .characteristics .action {
+.filterPopup .filterContainer .filters-window .filters .characteristics .action {
+  width: 100%;
+  flex-wrap: wrap;
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  gap: 10px;
   justify-content: end;
 }
 

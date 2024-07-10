@@ -1,3 +1,15 @@
+.filterPopup_button {
+    background-color: #ccc;
+    &> input {
+        display: none;
+        &:checked ~ .filterPopup {
+            display: flex;
+        }
+    }
+
+}
+
+
 .filterPopup {
     position: fixed;
     top: 0;
@@ -10,7 +22,7 @@
     align-items: center;
 
     background-color: #00000060;
-    // display: none;
+    display: none;
 
     .filterContainer {
         width: clamp(300px, 90%, 500px);
@@ -25,8 +37,11 @@
         grid-template-rows: 20px 1fr 20px;
         align-self: center;
 
-        .filters {
+        .filters-window {
             width: 100%;
+            overflow: scroll;
+            .filters {
+                width: 100%;
             & > div {
                 padding: 20px;
                 text-align: right;
@@ -37,7 +52,7 @@
                     margin-bottom: 20px;
                 }
             }
-            .characteristics {
+            .sell_rent {
                 .sellRent {
                     position: relative;
                     display: flex;
@@ -84,11 +99,17 @@
                         }
                     }
                 }
+            }
+            .characteristics {
+                
                 .action {
+                    width: 100%;
+                    flex-wrap: wrap;
                     display: flex;
-                    column-gap: 10px;
+                    gap: 10px;
                     justify-content: end;
                 }
+            }
             }
         }
     }

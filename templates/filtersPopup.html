@@ -1,0 +1,69 @@
+<div class="filterPopup_button">
+    <input type="checkbox" id="filters">
+    <label for="filters" class="filtersButton">filters</label>
+
+    <div class="filterPopup">
+        <div class="filterContainer">
+            <div class="title">סינונים נוספים</div>
+            <div class="filters-window">
+                <div class="filters">
+                    <div class="sell_rent">
+                        <div class="sellRent">
+                            <input type="checkbox" id="sellRent">
+                            <label for="sellRent">
+                                <div class="slider">
+                                    <span class="sell">מכירה</span>
+                                    <span class="rent">השכרה</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="characteristics">
+
+                        <div class="title">מאפייני הנכס</div>
+                        <div class="action">
+                            <input type="checkbox" class="btn" id="condition" >
+                            <label for="condition">מיזוג</label>
+                            <input type="checkbox" class="btn" id="stock" >
+                            <label for="stock">מחסן</label>
+                            <input type="checkbox" class="btn" id="parking">
+                            <label for="parking">מניה</label>
+                            <input type="checkbox" class="btn" id="elevator">
+                            <label for="elevator">מעלית</label>
+                            <input type="checkbox" class="btn" id="mamad">
+                            <label for="mamad">ממ״ד</label>
+                            <input type="checkbox" class="btn" id="balcony">
+                            <label for="balcony">מרפסת</label>
+                            <input type="checkbox" class="btn" id="repair">
+                            <label for="repair">משופצת</label>
+                            <input type="checkbox" class="btn" id="invalids">
+                            <label for="invalids">גישה לנכים</label>
+                            <input type="checkbox" class="btn" id="furnished">
+                            <label for="furnished">מרוהטת</label>
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div class="title">קומה</div>
+                        <div class="customRangeSlider" min="-1" max="20" alias='{
+                        "-1": "מרתף",
+                        "0": "קרקע",
+                        "20": "20+"
+                    }'></div>
+                    </div>
+                    <div class="square">
+                        <div class="title">גודל דירה (במ״ר)</div>
+                        <div class="customRangeSlider" min="0" max="250" alias='{"250" : "250+"}'></div>
+                    </div>
+                    <div class="cost">
+                        <div class="title">גודל דירה (במ״ר)</div>
+                        <div class="customRangeSlider" min="0" max="20000000" alias='{"20000000" : "20000000+"}'></div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <label for="filters" class="filtersButton" id="filter_accept">accept</label>
+                <label for="filters" class="filtersButton">cansel</label>
+            </div>
+        </div>
+    </div>
+</div>

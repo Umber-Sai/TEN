@@ -1,21 +1,32 @@
-import { init2slider } from "../other/slider";
+
+// import { init2slider } from "../other/slider";
+import CustomRangeSlider from "../other/slider.js";
+import { FilterPopup } from "./filterPopup";
 import { Products } from "./products";
 
 
 export class Main {
 
-    private rangeSliders: HTMLCollectionOf<Element> = document.getElementsByClassName('customRangeSlider');
-    constructor () {
-        new Products()
-        // setTimeout(() => {init2slider('id66', 'id66b', 'id661', 'id662', 'id66i1', 'id66i2')}, 0);
+    private filterPopup: FilterPopup;
+    private cardMaster : Products = new Products();
 
-        for (let i = 0; i < this.rangeSliders.length; i++) {
-            const element : HTMLElement = this.rangeSliders[i] as HTMLElement;
-            const alias: {[key : string] : string} | null = JSON.parse(element.getAttribute('alias')!);
-            const min = element.getAttribute('min')
-            const max = element.getAttribute('max')
-            setTimeout(() => {init2slider(element, max!, min!, alias)}, 0);
-            
+    constructor() {
+        const typeBar: HTMLElement | null = document.getElementById('typeBar')
+        if (!typeBar) throw new Error('typeBar not found')
+        this.filterPopup = new FilterPopup(typeBar);
+
+        
+
+        this.init()
+    }
+
+    async init() : Promise<void> {
+        await this.filterPopup.init();
+        document.getElementById('filter_accept')!.onclick = () => {
+            const filtersSettings = this.filterPopup.getFilterSettings();
+            console.log(filtersSettings);
+            this.cardMaster.filter(filtersSettings)
+
         }
     }
 }
