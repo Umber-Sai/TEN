@@ -19,7 +19,9 @@ export class FilterPopup {
             .then(text => {
                 return new DOMParser().parseFromString(text, 'text/html').body.firstChild as HTMLElement;
             });
-
+        
+        this.motherElement.appendChild(this.template!)
+        
         const rangeSliders: HTMLCollectionOf<Element> = this.template!.getElementsByClassName('customRangeSlider')
         for (let i = 0; i < rangeSliders.length; i++) {
             const element: HTMLElement = rangeSliders[i] as HTMLElement;
@@ -36,7 +38,7 @@ export class FilterPopup {
 
         // console.log(this.template)
 
-        this.motherElement.appendChild(this.template!)
+        
     }
 
     public getFilterSettings () : FilterSettings {

@@ -39,18 +39,19 @@ input.btn {
         box-shadow: 0 0 5px #00000050,
         inset 0 0 0px #00000050;
         border-radius: 7px;
-        transition: all .4s;
+        transition: all .3s;
         cursor: pointer;
         user-select: none;
-        border: 2px solid #fff;
         &:hover{
-            border: 2px solid #c0eed8;
+            // background-color: #c0eed8;
         }
     }
     &:checked + label {
         box-shadow:  0 0 0px #00000050,
-        inset 0 0 5px #00000050;
-        background-color: #5ec593;
+        inset 0 0 5px #00000060;
+        background-color: #c0eed8;
+        // background-color: #5ec593;
+        transform: scale(0.97);
         color: #11482c;
     }
 }

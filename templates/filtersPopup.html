@@ -3,6 +3,7 @@
     <label for="filters" class="filtersButton">filters</label>
 
     <div class="filterPopup">
+        <label class="disappear_popup" for="filters"></label>
         <div class="filterContainer">
             <div class="title">סינונים נוספים</div>
             <div class="filters-window">
@@ -55,12 +56,16 @@
                         <div class="customRangeSlider" min="0" max="250" alias='{"250" : "250+"}'></div>
                     </div>
                     <div class="cost">
-                        <div class="title">גודל דירה (במ״ר)</div>
-                        <div class="customRangeSlider" min="0" max="20000000" alias='{"20000000" : "20000000+"}'></div>
+                        <div class="title">מכיר</div>
+                        <div class="customRangeSlider" min="0" max="2000" alias='{"2000" : "20 000 000+"}'></div>
+                    </div>
+                    <div class="rooms">
+                        <div class="title">חדרים</div>
+                        <div class="customRangeSlider" min="1" max="5" alias='{"5" : "5+"}'></div>
                     </div>
                 </div>
             </div>
-            <div class="actions">
+            <div class="filter_actions">
                 <label for="filters" class="filtersButton" id="filter_accept">accept</label>
                 <label for="filters" class="filtersButton">cansel</label>
             </div>

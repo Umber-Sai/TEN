@@ -7,36 +7,34 @@
     text-align: center;
     border-radius: 5px;
     background-color: #ddd;
-    margin-bottom: 100px;
-
-
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    box-shadow: inset 0 0 5px #00000090;
+    margin-bottom: 70px;
 
     & > button {
         display: block;
         position: absolute;
         top: 50%;
 
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
 
         cursor: move;
         transform: translateY(-50%);
 
         border: none;
-        border-radius: 50%;
-        background-color: #999;
+        border-radius: 7px;
+        background-color: #fff;
+        box-shadow: 0 0 10px #00000050;
     }
 
     .range__between {
         position: absolute;
-        height: 4px;
+        height: 10px;
         width: 0px;
-        margin-top: 3px;
         border: none;
-        background-color: #559933;
+        background-color: #c0eed8;
+        box-shadow: inset 0 0 5px #00000090;
+        transform: translateX(4px);
 
     }
 
