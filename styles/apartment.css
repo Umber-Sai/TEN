@@ -60,6 +60,7 @@ body {
   color: #000;
   font-family: Elsie, sans-serif;
   background-color: #fff;
+  padding-top: 60px;
 }
 
 .container {
@@ -222,7 +223,6 @@ footer {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5647058824);
 }
 
-.preview {
-  display: grid;
-  grid-template-areas: "carousel props" "decsriprion description" "map map";
+.preview .carousel img {
+  width: 100%;
 }/*# sourceMappingURL=apartment.css.map */

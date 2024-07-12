@@ -1,3 +1,4 @@
+import { Apartament } from "./components/apartament";
 import { Main } from "./components/main";
 import { config } from "./config";
 
@@ -36,7 +37,7 @@ export class Router {
                 style : './styles/apartment.css',
                 template : './templates/apartment.html',
                 load () {
-                    // new Products()
+                    new Apartament()
                 }
             }
         ]
