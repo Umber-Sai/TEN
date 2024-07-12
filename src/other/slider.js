@@ -53,6 +53,7 @@ class CustomRangeSlider {
     init() {
 
         /*init*/
+        console.log(this.slider.offsetWidth)
         const sliderCoords = this.getCoords(this.slider);
         this.button1.style.marginLeft = '0px';
         this.button2.style.marginLeft = (this.slider.offsetWidth - this.button1.offsetWidth) + 'px';

@@ -58,6 +58,14 @@
                 border: 3px solid #fff;
                 box-shadow: 0 0 20px #00000090;
                 margin: 10px 0;
+                background-size: cover;
+                &.first {
+                    background-image: url(../static/img/managers/haim.jpg);
+                }
+                &.second {
+                    background-image: url(../static/img/managers/tatyana.jpg);
+                    background-position: 0 30%;
+                }
                 &::before {
                     content: '';
                     display: block;
@@ -113,7 +121,7 @@
             padding: 5px 10px;
             color: #555;
             transition: all .5s;
-
+            cursor: pointer;
         }
 
        

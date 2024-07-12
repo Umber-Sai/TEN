@@ -59,6 +59,7 @@
 body {
   color: #000;
   font-family: Elsie, sans-serif;
+  background-color: #fff;
 }
 
 .container {
@@ -264,22 +265,28 @@ footer {
   height: 100%;
 }
 
-.filterPopup_button {
-  background-color: #ccc;
+.filterPopup_button > label {
+  background-color: #c0eed8;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 .filterPopup_button > input {
   display: none;
 }
 .filterPopup_button > input:checked ~ .filterPopup {
-  display: flex;
+  top: 0;
 }
 
 .filterPopup {
   position: fixed;
-  top: 0;
+  top: -100vh;
   right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -299,21 +306,26 @@ footer {
   height: 90vh;
   text-align: center;
   display: grid;
-  grid-template-rows: 40px 1fr 40px;
+  grid-template-rows: 60px 1fr 60px;
   align-self: center;
   position: relative;
   z-index: 102;
 }
-.filterPopup .filterContainer .title {
-  line-height: 40px;
+.filterPopup .filterContainer .filter_title {
+  line-height: 60px;
   font-size: 20px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5647058824);
+  z-index: 2;
 }
 .filterPopup .filterContainer .filters-window {
   width: 100%;
+  margin: 0 auto;
   overflow: scroll;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .filterPopup .filterContainer .filters-window .filters {
   width: 100%;
@@ -383,6 +395,28 @@ footer {
   gap: 10px;
   justify-content: end;
 }
+.filterPopup .filterContainer .filter_actions {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5647058824);
+  z-index: 2;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterPopup .filterContainer .filter_actions > * {
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1254901961);
+}
+.filterPopup .filterContainer .filter_actions > #filter_accept {
+  border-color: #c0eed8;
+  padding: 5px 20px;
+}
+
 .main {
   padding: 100px 0;
 }
@@ -433,6 +467,14 @@ footer {
   border: 3px solid #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5647058824);
   margin: 10px 0;
+  background-size: cover;
+}
+.aboutUs .container .persone .portret.first {
+  background-image: url(../static/img/managers/haim.jpg);
+}
+.aboutUs .container .persone .portret.second {
+  background-image: url(../static/img/managers/tatyana.jpg);
+  background-position: 0 30%;
 }
 .aboutUs .container .persone .portret::before {
   content: "";
@@ -488,6 +530,7 @@ footer {
   padding: 5px 10px;
   color: #555;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .products .flats {
   display: flex;

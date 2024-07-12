@@ -1,4 +1,5 @@
 
+import { Header } from "./components/header";
 import { Router } from "./router";
 
 
@@ -8,6 +9,7 @@ class App {
 
   constructor () {
       this.router = new Router();
+      new Header()
       window.addEventListener('DOMContentLoaded', this.handlerRouteChanging.bind(this));
       window.addEventListener('popstate', this.handlerRouteChanging.bind(this));
   }

@@ -25,6 +25,7 @@ export class FilterPopup {
         const rangeSliders: HTMLCollectionOf<Element> = this.template!.getElementsByClassName('customRangeSlider')
         for (let i = 0; i < rangeSliders.length; i++) {
             const element: HTMLElement = rangeSliders[i] as HTMLElement;
+            console.log(element.offsetWidth)
             const id: string | undefined = element.parentElement?.className;
             const alias: { [key: string]: string } | null = JSON.parse(element.getAttribute('alias')!);
             const min: string | null = element.getAttribute('min')
