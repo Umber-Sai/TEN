@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "cost": 3000000,
+    "square": 85,
+    "floor": 5,
+    "maxFloor" : 9,
+    "rooms": 3,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "condition" : true,
+      "stock" : true
+    }
+  },
+  {
+    "id": 2,
+    "cost": 2000000,
+    "square": 70,
+    "floor": 3,
+    "maxFloor" : 5,
+    "rooms": 2,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "parking" : true,
+      "elevator" : true
+    }
+  },
+  {
+    "id": 3,
+    "cost": 7000000,
+    "square": 150,
+    "floor": 25,
+    "maxFloor" : 25,
+    "rooms": 5,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "mamad" : true,
+      "balcony" : true
+    }
+  },
+  {
+    "id": 4,
+    "cost": 4000000,
+    "square": 100,
+    "floor": 5,
+    "maxFloor" : 5,
+    "rooms": 3,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "repair" : true,
+      "invalids" : true
+    }
+  },
+  {
+    "id": 5,
+    "cost": 3000000,
+    "square": 85,
+    "floor": 5,
+    "maxFloor" : 9,
+    "rooms": 4,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "invalids" : true,
+      "furnished" : true
+    }
+  },
+  {
+    "id": 6,
+    "cost": 2000000,
+    "square": 70,
+    "floor": 3,
+    "maxFloor" : 5,
+    "rooms": 2,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "elevator" : true,
+      "furnished" : true
+    }
+  },
+  {
+    "id": 7,
+    "cost": 7000000,
+    "square": 150,
+    "floor": 25,
+    "maxFloor" : 25,
+    "rooms": 5,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "condition" : true,
+      "repair" : true
+    }
+  },
+  {
+    "id": 8,
+    "cost": 4000000,
+    "square": 100,
+    "floor": 5,
+    "maxFloor" : 5,
+    "rooms": 3,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "stock" : true,
+      "balcony" : true
+    }
+  },
+  {
+    "id": 9,
+    "cost": 3000000,
+    "square": 85,
+    "floor": 5,
+    "maxFloor" : 9,
+    "rooms": 3,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "mamad" : true,
+      "stock" : true
+    }
+  },
+  {
+    "id": 10,
+    "cost": 2000000,
+    "square": 70,
+    "floor": 3,
+    "maxFloor" : 9,
+    "rooms": 2,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "elevator" : true,
+      "parking" : true
+    }
+  },
+  {
+    "id": 11,
+    "cost": 7000000,
+    "square": 150,
+    "floor": 25,
+    "maxFloor" : 25,
+    "rooms": 5,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "repair" : true,
+      "furnished" : true
+    }
+  },
+  {
+    "id": 12,
+    "cost": 4000000,
+    "square": 100,
+    "floor": 5,
+    "maxFloor" : 5,
+    "rooms": 3,
+    "img": "img.webp",
+    "propertyCharacteristics" : {
+      "parking" : true,
+      "condition" : true
+    }
+  }
+]
